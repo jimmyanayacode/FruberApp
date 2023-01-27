@@ -1,0 +1,148 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "image": "https://firebasestorage.googleapis.com/v0/b/android-frubermerko.appspot.com/o/acelgasxd2.png?alt=media&token=86cf9142-294c-4edb-838d-73be3c21740f",
+            "price": 2500,
+            "quantity": 1,
+            "title": "Acelgas",
+            "category": "1"
+        },
+        {
+            "id": 2,
+            "image": "https://firebasestorage.googleapis.com/v0/b/android-frubermerko.appspot.com/o/agrasxd2.png?alt=media&token=0ae09a19-603c-491b-ac7f-ec3ca7e2bb41",
+            "price": 5000,
+            "quantity": 1,
+            "title": "Agras",
+            "category": "2"
+        },
+        {
+            "id": 3,
+            "image": "https://firebasestorage.googleapis.com/v0/b/android-frubermerko.appspot.com/o/aguacate.png?alt=media&token=a8a4c5dd-e4d7-4e45-9c6b-ce821a1c8b3b",
+            "price": 7500,
+            "quantity": 1,
+            "title": "Aguacate",
+            "category": "2"
+        },
+        {
+            "id": 5,
+            "image": "https://firebasestorage.googleapis.com/v0/b/android-frubermerko.appspot.com/o/aguacate_has.png?alt=media&token=e13f42db-15fd-4bf3-97fb-8fc351ce46fb",
+            "price": 7500,
+            "quantity": 1,
+            "title": "Aguacate has",
+            "category": "2"
+        },
+        {
+            "id": 6,
+            "image": "https://firebasestorage.googleapis.com/v0/b/android-frubermerko.appspot.com/o/ahuyama.png?alt=media&token=df3066da-1733-4dd4-8b91-0800de2223d6",
+            "price": 1300,
+            "quantity": 1,
+            "title": "Ahuyama",
+            "category": "3"
+        },
+        {
+            "id": 7,
+            "image": "https://firebasestorage.googleapis.com/v0/b/android-frubermerko.appspot.com/o/aji.png?alt=media&token=c2938842-6924-420c-82ab-3181c254bc6b",
+            "price": 8000,
+            "quantity": 1,
+            "title": "Ají",
+            "category": "3"
+        },
+        {
+            "id": 8,
+            "image": "https://firebasestorage.googleapis.com/v0/b/android-frubermerko.appspot.com/o/apio_aracacha.png?alt=media&token=54bde3da-a18b-4ffe-90d1-6f6178079861",
+            "price": 4000,
+            "quantity": 1,
+            "title": "Apio Aracacha",
+            "category": "3"
+        },
+        {
+            "id": 9,
+            "image": "https://firebasestorage.googleapis.com/v0/b/android-frubermerko.appspot.com/o/arveja_concha.png?alt=media&token=49cb20b2-18cb-4999-88f7-79e34200ab82",
+            "price": 8000,
+            "quantity": 1,
+            "title": "Arveja Concha",
+            "category": "3"
+        },
+        {
+            "id": 10,
+            "image": "https://firebasestorage.googleapis.com/v0/b/android-frubermerko.appspot.com/o/banano.png?alt=media&token=8a4a1c26-b0b6-4b4d-a2bb-54ab06089d21",
+            "price": 2600,
+            "quantity": 1,
+            "title": "Banano",
+            "category": "2"
+        },
+        {
+            "id": 11,
+            "image": "https://firebasestorage.googleapis.com/v0/b/android-frubermerko.appspot.com/o/brocoli.png?alt=media&token=8e3aed00-aeb4-46d4-85c7-12f5f9d74bbe",
+            "price": 3600,
+            "quantity": 1,
+            "title": "Brocoli",
+            "category": "1"
+        },
+        {
+            "id": 12,
+            "image": "https://firebasestorage.googleapis.com/v0/b/android-frubermerko.appspot.com/o/cebolla_cabezona.png?alt=media&token=91651f41-76a2-48e0-9a9a-ee7b971437cb",
+            "price": 5500,
+            "quantity": 1,
+            "title": "Cebolla Blanca",
+            "category": "3"
+        },
+        {
+            "id": 13,
+            "image": "https://firebasestorage.googleapis.com/v0/b/android-frubermerko.appspot.com/o/calabazin.png?alt=media&token=9b968cfd-6251-48cf-a1f6-e2cd1166cafa",
+            "price": 5500,
+            "quantity": 1,
+            "title": "Calabacin",
+            "category": "1"
+        },
+        {
+            "id": 14,
+            "image": "https://firebasestorage.googleapis.com/v0/b/android-frubermerko.appspot.com/o/cebolla_larga.png?alt=media&token=042a6e16-7400-4009-bc90-2a1dfe1d5c52",
+            "price": 5500,
+            "quantity": 1,
+            "title": "Cebolla larga",
+            "category": "3"
+        },
+        {
+            "id": 15,
+            "image": "https://firebasestorage.googleapis.com/v0/b/android-frubermerko.appspot.com/o/cebolla_puerro.png?alt=media&token=06292535-359f-4efa-b601-ee4993c1cea8",
+            "price": 5500,
+            "quantity": 1,
+            "title": "Cebolla puerro",
+            "category": "1"
+        },
+        {
+            "id": 16,
+            "image": "https://firebasestorage.googleapis.com/v0/b/android-frubermerko.appspot.com/o/cebolla_roja.png?alt=media&token=0bb4e6b9-1e44-4e2f-9af5-564cdb0ee599",
+            "price": 5500,
+            "quantity": 1,
+            "title": "Cebolla roja",
+            "category": "3"
+        },
+        {
+            "id": 17,
+            "image": "https://firebasestorage.googleapis.com/v0/b/android-frubermerko.appspot.com/o/champinon.png?alt=media&token=13dd8b57-8341-45a9-a55d-04433e64aa1f",
+            "price": 5500,
+            "quantity": 1,
+            "title": "Champiñon",
+            "category": "1"
+        },
+        {
+            "id": 18,
+            "image": "https://firebasestorage.googleapis.com/v0/b/android-frubermerko.appspot.com/o/cilantro.png?alt=media&token=f247f450-3534-4cff-a6e5-419c036677ea",
+            "price": 5500,
+            "quantity": 1,
+            "title": "Cilantro",
+            "category": "1"
+        },
+        {
+            "id": 19,
+            "image": "https://firebasestorage.googleapis.com/v0/b/android-frubermerko.appspot.com/o/fresa.png?alt=media&token=28e42c95-879b-4612-b71b-ad96340fb566",
+            "price": 5500,
+            "quantity": 1,
+            "title": "Fresa",
+            "category": "2"
+        }
+    ]
+}
