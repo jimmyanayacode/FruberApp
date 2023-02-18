@@ -3,18 +3,20 @@ import { Product } from "../../models/product-model";
 
 export const localhostProductToModel = ( localhostProduct ) => {
     const {
-        id,
-        image, 
-        price,
+        _id,
+        img, 
+        precio,
         quantity,
-        title
+        nombre, 
+        category
     } = localhostProduct;
 
     return new Product({
-        id,
-        image,
-        price,
+        id:_id,
+        image:img,
+        price:precio,
         quantity,
-        title
+        title:nombre, 
+        category
     })
 }

@@ -39,7 +39,7 @@ const readProduct = (product) => {
     }
 
     productShoppinCarStore.addProduct( infoProduct );
-    products.getProducts(infoProduct.id);
+    
     shoppingCarHtml();
 }
 
