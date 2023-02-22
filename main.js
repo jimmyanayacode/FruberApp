@@ -17,5 +17,3 @@ const deleteProductsShoppingCar = document.querySelector('#vaciar-carro');
 listProduct.addEventListener('click', addProduct);
 deleteProductShoppingCar.addEventListener('click', deleteProduct);
 deleteProductsShoppingCar.addEventListener('click', deleteProducts);
-
-

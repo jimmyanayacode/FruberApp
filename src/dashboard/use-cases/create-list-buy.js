@@ -1,20 +1,20 @@
 
-
-import { renderCard } from "../presentation/render-card/render-card";
+import { changeDataCard, renderCard, takeOutCard } from "../presentation/render-card/render-card";
 import productShoppinCarStore from "../store/product-shopping-car";
-import products from "../store/products";
+
 
 const listData = document.querySelector('#lista-carro tbody');
 
 
 export const addProduct = (e) => {
 
-    e.preventDefault();
+    e.preventDefault(); 
 
     const product = e.target.parentElement.parentElement;
     const input = product.querySelector('input');
 
     if (e.target.classList.contains('add-shop-car')) {
+        takeOutCard( product );
         readProduct(product);
     }
 
@@ -30,16 +30,17 @@ export const addProduct = (e) => {
 }
 
 const readProduct = (product) => {
+    
     const infoProduct = {
         image: product.querySelector('img').src,
         title: product.querySelector('h4').textContent,
         price: product.querySelector('span').textContent,
         id: product.querySelector('.add-shop-car').getAttribute('data-id'),
-        quantity: product.querySelector('input').value 
+        quantity: product.querySelector('input').value,
+        category: product.querySelector('#category').getAttribute('data')
     }
-
-    productShoppinCarStore.addProduct( infoProduct );
     
+    productShoppinCarStore.addProduct( infoProduct );
     shoppingCarHtml();
 }
 
@@ -76,7 +77,6 @@ export const deleteProduct =(e) => {
 
 export const deleteProducts = () => {
     productShoppinCarStore.deleteProducts()
-    console.log(productShoppinCarStore.getProducts());
     shoppingCarHtml();
 }
 

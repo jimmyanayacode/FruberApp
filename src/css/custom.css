@@ -8,10 +8,10 @@ h1 {
     text-align: center;
 }
 h2 {
-    font-size: 3rem;
+    font-size: x-large;
 }
 h4 {
-    font-size: 16px;
+    font-size: x-large;
     font-weight: 700;
 }
 header {
@@ -153,9 +153,14 @@ ul {
     padding: 10px 20px;
 }
 
+.info-card h4{
+    font-size: x-large;
+}
+
 .info-card p, 
 .card h4 {
     margin-bottom: 5px;
+    
 }
 .info-card .precio {
     text-decoration: line-through;
@@ -186,11 +191,17 @@ text-decoration: none;
     .icono {
         margin-bottom:0;
     }
+    h4{
+        font-size: x-large;
+    }
 }
 
 
 @media (min-width: 550px) {
     .card {
         text-align: left;
+    }
+    h4{
+        font-size: x-large;
     }
 }

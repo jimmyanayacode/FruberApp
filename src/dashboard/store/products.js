@@ -1,13 +1,10 @@
+
 import { loadProductsByPage } from "../use-cases/load-products-by-page"
-
-
 
 const state = {
     currentPage: 0,
     products: [],
 }
-
-
 
 const reloadPage = async() => {
     const products = await loadProductsByPage( state.currentPage )
@@ -18,13 +15,29 @@ const reloadPage = async() => {
     state.products = products;
 }
 
-/* const requestProduct = ( id ) => {
-    const availableProducts = state.products.filter( product.id === id);
-    state.products = availableProducts;
-} */
+const takeOutCardtoShop = ( id ) => {
+    state.products = state.products.filter( product => product.id !== id);
+    return state.products
+}
+
+const takeInCardtoShop = ( product ) => {
+    state.products.unshift( product );
+    state.products.sort(function(a, b){
+        if (a.title > b.title) {
+            return 1;
+        }
+        if (a.title < b.title) {
+            return -1;
+        }
+        return 0;
+    })
+}
 
 export default {
     reloadPage,
+    takeInCardtoShop,
+    takeOutCardtoShop,
     getProducts: () => [...state.products],
-    getCurrentPage: () => state.currentPage
+    getCurrentPage: () => state.currentPage,
+   
 }

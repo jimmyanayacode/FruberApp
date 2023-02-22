@@ -17,6 +17,6 @@ export const localhostProductToModel = ( localhostProduct ) => {
         price:precio,
         quantity,
         title:nombre, 
-        category
+        category:category.nombre
     })
 }

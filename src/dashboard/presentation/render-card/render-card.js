@@ -24,8 +24,8 @@ export const filterProductCategory = (category) => {
 
   } else {
 
-    data.products = getProducts.getProducts().filter(product => product.category.nombre === category);
-
+    data.products = getProducts.getProducts().filter(product => product.category === category);
+    
   }
 
   renderCard(cardCreate);
@@ -53,6 +53,7 @@ export const renderCard = (element) => {
       <a href="#" class="button input minus-quantyty">-</a>  
       </div>
     
+      <p id="category" data="${product.category}"></p>
       <p>Precio ultima compra:<span class="u-pull-right">${product.price}</span></p>
       <a href="#" class="u-full-width button-primary button input add-shop-car" data-id="${product.id}">Agregar al carrito</a>
     </div>
@@ -62,4 +63,17 @@ export const renderCard = (element) => {
   });
 }
 
+
+export const takeOutCard = ( product ) => {
+  let id = product.querySelector('.add-shop-car').getAttribute('data-id');
+  
+  data.products = getProducts.takeOutCardtoShop( id );
+  const category = document.querySelector('#category').value;
+  filterProductCategory(category);
+  
+}
+
+export const changeDataCard = () => {
+  renderCard(cardCreate);
+}
 

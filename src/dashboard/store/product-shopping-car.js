@@ -1,4 +1,7 @@
 
+import { Product } from '../../models/product-model';
+import { changeDataCard, filterProductCategory, renderCard } from '../presentation/render-card/render-card';
+import getProducts from '../store/products';
 
 const shoppingCar = {
     products: []
@@ -21,7 +24,12 @@ const addProduct = ( productAdd ) =>  {
 }
 
 const deleteProduct = ( id ) => {
+    const productCanceledShoppingCar = shoppingCar.products.filter( product => product.id === id );
+    const product = new Product(productCanceledShoppingCar[0])
+    getProducts.takeInCardtoShop(product);
     shoppingCar.products = shoppingCar.products.filter( product => product.id !== id)
+    const category = document.querySelector('#category').value;
+    filterProductCategory(category);
 }
 
 const deleteProducts = () => {
