@@ -1,11 +1,11 @@
-
-import { changeDataCard, renderCard, takeOutCard } from "../presentation/render-card/render-card";
+import { shoppingCarHtml } from "../presentation/render-shopping-car/render-shopping-car";
 import productShoppinCarStore from "../store/product-shopping-car";
+import { takeOutCard } from "./filter-products-category";
 
-
-const listData = document.querySelector('#lista-carro tbody');
-
-
+/**
+ * Add product to shopping car
+ * @param {HTMLElement} e 
+ */
 export const addProduct = (e) => {
 
     e.preventDefault(); 
@@ -29,6 +29,10 @@ export const addProduct = (e) => {
     }
 }
 
+/**
+ * Get product data of card element and show in the shopping car
+ * @param {HTMLElement} product card
+ */
 const readProduct = (product) => {
     
     const infoProduct = {
@@ -44,27 +48,10 @@ const readProduct = (product) => {
     shoppingCarHtml();
 }
 
-const shoppingCarHtml = () => {
-    listData.innerHTML = '';
-    const shoppingCarShow = productShoppinCarStore.getProducts();
-    
-    shoppingCarShow.forEach( product => {
-        const row = document.createElement('tr');
-        row.innerHTML = `
-            <td>
-                <img src="${product.image}" width=100>
-            </td>
-            <td>${product.title}</td>
-            <td>${product.price}</td>
-            <td>${product.quantity}</td>
-            <td>
-                <a href="#" class="delete-product" data-id="${product.id}">X</a>
-            </td>
-        `;
-        listData.appendChild(row);
-    });
-}
-
+/**
+ * Delete Product of shopping car
+ * @param {PointerEvent}  
+ */
 export const deleteProduct =(e) => {
     e.preventDefault();
     if (e.target.classList.contains('delete-product')) {
@@ -74,7 +61,9 @@ export const deleteProduct =(e) => {
     }
 }
 
-
+/**
+ * Delete all Products of shopping car
+ */
 export const deleteProducts = () => {
     productShoppinCarStore.deleteProducts()
     shoppingCarHtml();

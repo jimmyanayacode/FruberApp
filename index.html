@@ -6,22 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>FruberApp</title>
-  <link rel="stylesheet" href="/src/css/custom.css">
-  <link rel="stylesheet" href="/src/css/normalize.css">
-  <link rel="stylesheet" href="/src/css/skeleton.css">
+  <link rel="stylesheet" href="/src/assets/css/custom.css">
+  <link rel="stylesheet" href="/src/assets/css/normalize.css">
+  <link rel="stylesheet" href="/src/assets/css/skeleton.css">
 </head>
 
 <body>
   <header id="header" class="header">
-    <div class="container">
-      <div class="row">
-        <div class="four columns">
-          <img src="" id="logo" alt="logo-empresa">
+    <div class="container__header">
+      <div class="banner__dashboard" id="banner-dashboard">
+      </div>
+      <div class=" row navigation">
+        <div class="four columns logo">
+          <img src="/src/assets/img/logo-merko.png" id="logo" alt="logo-empresa">
         </div>
-        <div class="two columns u-pull-right">
-          <ul>
+        <nav class="five columns u-pull-right navigation__items--menu">
+          <ul class="nav__menu">
+            <li><a href="./src/login/index.html"><img src="/public/img/user-login.png" alt="Iniciar sesion"><p class="mensaje__nav">Iniciar session</p></a></li>
+            <li><a href="./src/login/index.html"><img src="/public/img/user-register.png" alt="Registrar usuario"><p class="mensaje__nav">Registrar usuario</p></a></li>
             <li class="submenu">
-              <img src="/public/img/cart.png" id="img-carrito" alt="img-carro-compras">
+              <img src="/public/img/shopping-cart-yellow.png" id="img-carrito" alt="img-carro-compras">
               <div id="shoppingCar">
 
                 <table id="lista-carro" class="u-full-width">
@@ -42,29 +46,28 @@
               </div>
             </li>
           </ul>
-        </div>
+        </nav>
       </div>
     </div>
   </header>
 
-  <div id="hero">
+  <div id="search" class="search-barra">
     <div class="container">
       <div class="row">
-        <div class="six columns">
+        <div class="four columns">
           <div class="contenido-hero">
-            <h2>Aprende algo nuevo</h2>
-            <p>Todos los cursos a $15</p>
-            <form action="#" id="busqueda" method="post" class="formulario">
-              <input class="u-full-width" type="text" placeholder="Que te gustaría aprender?" id="buscador">
-              <input type="submit" id="submit-buscador" class="submit-buscador">
+            <h2>Aquí encuentras tu producto más rapido</h2>
+              <input class="u-full-width" type="text" placeholder="Que te producto deseas?" id="search-product">
             </form>
           </div>
+        </div>
+          <div class="eight columns cards__results--search" id="card-search">
         </div>
       </div>
     </div>
   </div>
 
-  <div class="barra">
+  <!-- <div class="barra">
     <div class="container">
       <div class="row">
         <div class="four columns icono icono1">
@@ -81,13 +84,13 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <div id="list-product" class="container">
     <h1 id="encabezado" class="encabezado">Hacer lista fruber</h1>
     <div class="select-category">
       <h3>Categoria</h3>
-      <select name="category" id="category">
+      <select name="category" id="category-choose">
         <option value="0" selected>Todos</option>
         <option value="FRUTAS">Frutas</option>
         <option value="VERDURA">Vegetales</option>

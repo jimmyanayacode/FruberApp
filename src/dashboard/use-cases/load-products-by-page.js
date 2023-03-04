@@ -1,6 +1,6 @@
 import { localhostProductToModel } from "../mappers/localhost-product.mapper";
 
-
+// Request get all products of backend
 export const loadProductsByPage = async() => {
     const url = `${ import.meta.env.VITE_BASE_URL }/api/products`;
     /* const url = `${ import.meta.env.VITE_BASE_URL }/products?_page=${page}`; */

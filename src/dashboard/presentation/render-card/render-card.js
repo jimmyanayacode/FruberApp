@@ -1,41 +1,24 @@
-import '../../../css/custom.css';
-import '../../../css/normalize.css';
-import '../../../css/skeleton.css';
-import getProducts from '../../store/products';
+import '../../../assets/css/custom.css';
+import '../../../assets/css/normalize.css';
+import '../../../assets/css/skeleton.css';
+import { filterProductCategory } from '../../use-cases/filter-products-category';
 
-
-const data = {
-  products: [],
-}
-
+// Create reference to element html
 const cardCreate = document.querySelector('#cards');
-const category = document.querySelector('#category');
+const category = document.querySelector('#category-choose');
 
+//listening changes in the reference html (category)
 category.addEventListener('change', e => {
   const category = e.target.value;
   filterProductCategory(category);
 });
 
-export const filterProductCategory = (category) => {
-
-  if (category == 0) {
-
-    data.products = getProducts.getProducts();
-
-  } else {
-
-    data.products = getProducts.getProducts().filter(product => product.category === category);
-    
-  }
-
-  renderCard(cardCreate);
-}
-
 let card
 
-export const renderCard = (element) => {
-  cardCreate.innerHTML = '';
-  const products = data.products;
+// Create cards with product data and show in the app web.
+export const renderCard = (element, productsData) => {
+  element.innerHTML = '';
+  const products = productsData;
   products.forEach(product => {
 
     card = document.createElement('div');
@@ -48,9 +31,9 @@ export const renderCard = (element) => {
     
       <p>Cantidad:</p>
       <div class="quantity-counter">
-      <a href="#" class="button input plus-quantyty">+</a>
+      <a href="#" class="button input minus-quantyty">-</a>
       <input id="${product.id}" type="text" style="text-align: center; width: 50px; height:50px" value=1>
-      <a href="#" class="button input minus-quantyty">-</a>  
+      <a href="#" class="button input plus-quantyty">+</a>  
       </div>
     
       <p id="category" data="${product.category}"></p>
@@ -63,17 +46,8 @@ export const renderCard = (element) => {
   });
 }
 
-
-export const takeOutCard = ( product ) => {
-  let id = product.querySelector('.add-shop-car').getAttribute('data-id');
-  
-  data.products = getProducts.takeOutCardtoShop( id );
-  const category = document.querySelector('#category').value;
-  filterProductCategory(category);
-  
-}
-
-export const changeDataCard = () => {
-  renderCard(cardCreate);
+// Render cards when  product data change
+export const changeDataCard = (products) => {
+  renderCard(cardCreate, products);
 }
 

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login y Registro - FruberApp.</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <main>
+        <div class="container__box">
+            <div class="box__behind">
+                <div class="box__behind-login">
+                    <h3>¿Ya tienes una cuenta?</h3>
+                    <p>Inicia sesión para entrar en la página</p>
+                    <button id="btn__init-sesion">Iniciar sesión</button>
+                </div>
+                <div class="box__behind-register">
+                    <h3>¿Aún no tienes una cuenta?</h3>
+                    <p>Regístrate para que puedas iniciar sesión</p>
+                    <button id="btn__init-register">Regístrarse</button>
+                </div> 
+            </div>
+
+            <!-- Login form and register form -->
+            <div class="box__infront-login-register">
+                <!-- Login form -->
+                <form class="login__form">
+                    <h2>Iniciar sesión</h2>
+                    <input type="text" placeholder="juan@gmail.com">
+                    <input type="password" placeholder="Contraseña">
+                    <button type="button" class="btn-log-reg" id="btn-login" >Login</button>
+                    <!-- <button id="btn-login">Entrar</button> -->
+                </form>
+
+                <form action="" class="register__form">
+                    <h2>Regístrarse</h2>
+                    <input id="name" type="text" placeholder="Nombre completo" required>
+                    <input id="email" type="email" placeholder="Correo electronico" required>
+                    <input id="phone" type="text" placeholder="Telefono">
+                    <input id="password" type="password" placeholder="Contraseña" required>
+                    <button type="button" class="btn-log-reg" id="btn-register">Registrarse</button>
+                    </br>
+                    <p id="mensagge"></p>
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+    <script type="module" src="assets/index.js"></script>
+</body>
+</html>
