@@ -198,6 +198,18 @@ ul {
     margin:10px 0;
 }
 
+#mesagge-Shopping-car{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    font-weight: 400;
+    color: white;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    border-radius: 5px;
+}
+
 #search-product{
     color: #2c1302;
 }

@@ -21,7 +21,8 @@ const addProduct = ( productAdd ) =>  {
             }
         })
     }else{
-        shoppingCar.products.push(productAdd);
+        const productAddCar = new Product(productAdd)
+        shoppingCar.products.push(productAddCar);
     }
 }
 

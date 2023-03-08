@@ -3,6 +3,8 @@ import { addProduct, deleteProduct, deleteProducts } from "./src/dashboard/use-c
 import getProducts from "./src/dashboard/store/products";
 import { filterProductCategory, takeProductsForSearch } from "./src/dashboard/use-cases/filter-products-category";
 
+import { dataOrder } from "./src/dashboard/use-cases/generate-order";
+
 await getProducts.reloadPage();
 
 document.addEventListener('DOMContentLoaded', filterProductCategory('0'));
@@ -13,6 +15,11 @@ const deleteProductsShoppingCar = document.querySelector('#vaciar-carro');
 const navBar = document.querySelector('.navigation');
 const input = document.querySelector('#search-product');
 const cardSearch = document.querySelector('#card-search');
+
+const buttonGenerateBuy = document.querySelector('#Generar-compra');
+
+
+buttonGenerateBuy.addEventListener('click', dataOrder); 
 
 
 listProduct.addEventListener('click', addProduct);

@@ -22,27 +22,34 @@
         </div>
         <nav class="five columns u-pull-right navigation__items--menu">
           <ul class="nav__menu">
-            <li><a href="./src/login/index.html"><img src="/public/img/user-login.png" alt="Iniciar sesion"><p class="mensaje__nav">Iniciar session</p></a></li>
-            <li><a href="./src/login/index.html"><img src="/public/img/user-register.png" alt="Registrar usuario"><p class="mensaje__nav">Registrar usuario</p></a></li>
+            <li><a href="./src/login/index.html"><img src="/public/img/user-login.png" alt="Iniciar sesion">
+                <p class="mensaje__nav">Iniciar session</p>
+              </a></li>
+            <li><a href="./src/login/index.html"><img src="/public/img/user-register.png" alt="Registrar usuario">
+                <p class="mensaje__nav">Registrar usuario</p>
+              </a></li>
             <li class="submenu">
               <img src="/public/img/shopping-cart-yellow.png" id="img-carrito" alt="img-carro-compras">
               <div id="shoppingCar">
+                
+                  <table id="lista-carro" class="u-full-width">
+                    <thead>
+                      <tr>
+                        <th>Imagen</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                  </table>
+                
 
-                <table id="lista-carro" class="u-full-width">
-                  <thead>
-                    <tr>
-                      <th>Imagen</th>
-                      <th>Nombre</th>
-                      <th>Precio</th>
-                      <th>Cantidad</th>
-                      <th></th>
-                    </tr>
-                  </thead>
-                  <tbody></tbody>
-                </table>
-
-                <a href="#" id="vaciar-carro" class="button u-full-width">Vaciar compra</a>
-                <a href="#" id="Generar-compra " class="button u-full-width button-primary">Generar compra</a>
+                  <a href="#" id="vaciar-carro" class="button u-full-width">Vaciar compra</a>
+                  <a href="#" id="Generar-compra" class="button u-full-width button-primary">Generar compra</a>
+                  <p id="mesagge-Shopping-car"></p>
+               
               </div>
             </li>
           </ul>
@@ -57,11 +64,11 @@
         <div class="four columns">
           <div class="contenido-hero">
             <h2>Aquí encuentras tu producto más rapido</h2>
-              <input class="u-full-width" type="text" placeholder="Que te producto deseas?" id="search-product">
+            <input class="u-full-width" type="text" placeholder="Que te producto deseas?" id="search-product">
             </form>
           </div>
         </div>
-          <div class="eight columns cards__results--search" id="card-search">
+        <div class="eight columns cards__results--search" id="card-search">
         </div>
       </div>
     </div>
@@ -94,7 +101,7 @@
         <option value="0" selected>Todos</option>
         <option value="FRUTAS">Frutas</option>
         <option value="VERDURA">Vegetales</option>
-    </select>
+      </select>
     </div>
     <div class="row" id="cards">
     </div>
